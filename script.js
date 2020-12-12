@@ -63,6 +63,10 @@ function User(name, language, grade = grades.Junior) {
   };
 };
 
+const result = (grade, user) => {
+  grade ? console.log(`Cool! Now ${user.name}'s grade is ${grade}!`) : console.log(`${user.name} needs to do more tasks!`);
+}
+
 const user = new User('John', 'C++', grades.Junior);
 const user1 = new User('Vasya', 'Rust', grades.Senior);
 const user2 = new User('Nifertiti', 'Boo', grades.Middle);
@@ -90,10 +94,6 @@ user2.fine('fail');
 let resultUser = user.upgrade(),
 resultUser1 = user1.upgrade(),
 resultUser2 = user2.upgrade();
-
-const result = (grade, user) => {
-  grade ? console.log(`Cool! Now ${user.name}'s grade is ${grade}!`) : console.log(`${user.name} needs to do more tasks!`);
-}
 
 result(resultUser, user);
 result(resultUser1, user1);
